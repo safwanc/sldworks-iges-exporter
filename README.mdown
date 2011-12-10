@@ -1,16 +1,17 @@
-SolidWorks 2011 IGES Exporter
-=============================
+SolidWorks IGES Exporter
+========================
+Macro code for intelligent export of SolidWorks parts and assemblies in the IGES format. Was initially written for the purposes of passing CAD drawings to machine shops using older CAD software like MasterCam.. Some information is lost (i.e. naming convention for subassemblies, etc) using the built in exporter so the aim of this code is to drill down and export on a part-by-part basis. 
 
-Background History
-------------------
+Background
+----------
 This was originally written at the University of Waterloo for a fairly complex electromechanical design project of a lower body humanoid robot platform. The engineering machine shop located on campus was responsible for the manufacturing of the initial design but they lacked the ability to load SolidWorks 2011 files. To get around the compatibility issue, IGES was chosen as a neutral format which could open on the available CAD programs. It quickly became apparent that the built in IGES exporter for SolidWorks was not a reliable option since subassemblies and part files lose their names (and some other weird behaviour started to occur). To get around this, the code was written to simplify the export of large scale CAD assemblies designed in SolidWorks into IGES files on a part-by-part level. This made it a lot easier to revise the mechanical design during the production cycle as issues emerged.
 
-Technical Requirements
-----------------------
+Requirements
+-------------
 * SolidWorks 2011 SP0-SP3
 * Visual Studio 2008+ (Express Editions are fine)
 * Microsoft .NET Framework 2.0+ 
 
-Running the Code
-----------------
+Usage
+-----
 Simply open up SolidWorks and start a new macro project (C#). Click on the 'Edit Macro' button in the toolbar and it will launch the blank template project in Visual Studio. Delete the pre-existing *.cs files and add the code files committed in the master branch. Compile with Visual Studio and you can even attach the debugger to the code if something doesn't work 
